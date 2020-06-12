@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "338906526140",
+    "firebase_url": "https://healrutine.firebaseio.com",
+    "project_id": "healrutine",
+    "storage_bucket": "healrutine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338906526140:android:917d9a86c526f307873bb9",
+        "android_client_info": {
+          "package_name": "com.example.healt_rutine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338906526140-vr9icuvljak0hb9lg14bi7bbjq502h2r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healt_rutine",
+            "certificate_hash": "c5e832fcc4d3982346483600ac4531982fb35020"
+          }
+        },
+        {
+          "client_id": "338906526140-dtka6c7i0kf3qd911pbkhijjcep861gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBereFcTTUNS-YwLWh_-nITFGRmwqfK0uU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338906526140-dtka6c7i0kf3qd911pbkhijjcep861gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
