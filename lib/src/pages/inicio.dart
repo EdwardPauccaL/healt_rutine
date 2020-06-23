@@ -14,12 +14,12 @@ class _HomeState extends State<Inicio> {
 
 
   var arreglox = [
-    {"nombre": "El mercado fitness", "imagen": "healtrutine.png", "deporte": "Te has preguntado ¿En qué te puede ayudar la tecnología fitness para poder potenciar tu centro? Pues...  ¡Bienvenido a la era digital! Hablamos de tecnología fitness cuando nos referimos a los dispositivos de seguimiento para entrenamientos, máquinas de ejercicios y, por supuesto, sistemas o aplicativos de gestión para todo tipo de centros fitness.Gracias a ella, las boutiques fitness o gimnasios pueden ofrecer nuevas experiencias, al mejorar el servicio y agilizar procesos, logran fidelizar a sus clientes mediante la tecnología; además de posicionarlos como centros innovadores.El mercado de la industria fitness en Latinoamérica se encuentra en una etapa de apogeo, generando un aproximado de US 6 mil millones anuales. Actualmente casi 20 millones de latinoamericanos son miembros de algún centro o boutique fitness y el número va en aumento."},
-    {"nombre": "El perfil del consumidor de hoy", "imagen": "premiun2.png", "deporte": "En todos los sectores de economía el impacto digital les dio un cambio de 360 grados  a los modelos tradicionales de negocios y es que con la tecnología las necesidades y las expectativas del consumidor han cambiado. Ahora nos enfrentamos a un nuevo consumidor."},
-    {"nombre": "Cinta Elastica", "imagen": "Premiun.jpeg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Cinta", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 2 repeticiones de 15"},
-    {"nombre": "Abdomen", "imagen": "mejoralimentos.jpg", "deporte": "Abdomen alto..."},
-    {"nombre": "Peso", "imagen": "peso.jpg", "deporte": "Trabajo pesas de 5kg"},
+    {"nombre": "Bienvenido", "imagen": "healtrutine.png", "descripcion": "Te has preguntado ¿En qué te puede ayudar la tecnología fitness para poder potenciar tu centro? Pues...  ¡Bienvenido a la era digital! Hablamos de tecnología fitness cuando nos referimos a los dispositivos de seguimiento para entrenamientos, máquinas de ejercicios y, por supuesto, sistemas o aplicativos de gestión para todo tipo de centros fitness.Gracias a ella, las boutiques fitness o gimnasios pueden ofrecer nuevas experiencias, al mejorar el servicio y agilizar procesos, logran fidelizar a sus clientes mediante la tecnología; además de posicionarlos como centros innovadores.El mercado de la industria fitness en Latinoamérica se encuentra en una etapa de apogeo, generando un aproximado de US 6 mil millones anuales. Actualmente casi 20 millones de latinoamericanos son miembros de algún centro o boutique fitness y el número va en aumento."},
+    {"nombre": "Primeros Pasos", "imagen": "premiun2.png", "descripcion": "En todos los sectores de economía el impacto digital les dio un cambio de 360 grados  a los modelos tradicionales de negocios y es que con la tecnología las necesidades y las expectativas del consumidor han cambiado. Ahora nos enfrentamos a un nuevo consumidor."},
+    {"nombre": "Prueba Premiun", "imagen": "Premiun.jpeg", "descripcion": "Trabajo con cinta 4 repeticiones de 15"},
+    {"nombre": "Reto 28 Dias", "imagen": "cinta2.jpg", "descripcion": "Trabajo con cinta 2 repeticiones de 15"},
+    {"nombre": "Saludable", "imagen": "mejoralimentos.jpg", "descripcion": "Abdomen alto..."},
+    {"nombre": "¿Te apuntas?", "imagen": "peso.jpg", "descripcion": "Trabajo pesas de 5kg"},
   ];
 
 
@@ -42,7 +42,7 @@ class _HomeState extends State<Inicio> {
                       builder: (BuildContext context) => new Detalle(
                         nombre: arregloxyz['nombre'],
                         imagen: imagen,
-                        deporte: arregloxyz['deporte']
+                        descripcion: arregloxyz['descripcion']
                       ),
                     )),
                     child: new Image.asset(
@@ -84,7 +84,7 @@ class _HomeState extends State<Inicio> {
            style: TextStyle(
              fontWeight: FontWeight.w300,
              fontStyle: FontStyle.italic,
-           fontSize: 25,
+           fontSize: 32,
            color: Color(0xFF5F44A3)),
          ),
          ), 
@@ -102,65 +102,14 @@ class _HomeState extends State<Inicio> {
         //],
 
        ),
-    //todo lo comentado aqui abajo es una barra lateral con sus ontap respectivos
-          //drawer: new Drawer(
-            //child: new ListView(
-              //children: <Widget>[
-                //new UserAccountsDrawerHeader(
-                  //accountName: new Text('', style: TextStyle(
-                //fontSize: 19,
-                 //color: Colors.black,)
-                 //),
-                  //accountEmail: new Text(''),
-                  //decoration: new BoxDecoration(
-                    //image: new DecorationImage(
-                      //fit: BoxFit.cover,
-                      //image: AssetImage('img/Usuario.png'),
-                    //)
-                  //),
-                //),
-                //new Divider(),
-                //new ListTile(
-                  //Division para otra widget
-                  //title: new Text("Perfil"),
-                  //trailing: new Icon(Icons.face),
-                  //onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                    //builder: (BuildContext context) => PerfilUsu(),
-                  //)),
-                //),
-                //new Divider(),
-                //new ListTile(
-                  //Division para otra widget
-                  //title: new Text("Calculadora IMC"),
-                  //trailing: new Icon(Icons.fitness_center),
-                  //onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                   // builder: (BuildContext context) => MyCalculatorApp(),
-                 // )),
-                //),
-                //new Divider(),
-                //new ListTile(
-                  //Division para otra widget
-                  //title: new Text("Dieta Recomendadas"),
-                  //trailing: new Icon(Icons.alarm_on),
-                  //onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                   // builder: (BuildContext context) => DietasRec(),
-                 // )),
-               // ),
-                //new Divider(),
-                //new ListTile(
-                  //title: new Text("Soporte"),
-                  //trailing: new Icon(Icons.help),
-                  //onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                   // builder: (BuildContext context) => Nosotros(),
-                  //)),
-                //),
-              //],
-            //),
-          //),
+    
           body: new GridView.count(
-            crossAxisCount: 1, //numero de columas de la primera pagina pruebn con 1
-            mainAxisSpacing: 0.1, //espacio entre card
-            childAspectRatio: 0.900, //espacio largo de cada card 
+            primary: false,
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.all(15),
+            crossAxisCount: 2, //numero de columas de la primera pagina pruebn con 1
+            mainAxisSpacing: 10, //espacio entre card
+            childAspectRatio: 1.300, //espacio largo de cada card 
             children: listamos,
           ),
     );
@@ -170,10 +119,10 @@ class _HomeState extends State<Inicio> {
 //creamos el metodo detalle
 //este se usa cuando pulsamos para ver segunda pantalla la descripcion del ejercicio
 class Detalle extends StatelessWidget {
-   Detalle({this.nombre, this.imagen, this.deporte});
+   Detalle({this.nombre, this.imagen, this.descripcion});
   final String nombre;
   final String imagen;
-  final String deporte;
+  final String descripcion;
 
 
     @override
@@ -200,7 +149,7 @@ class Detalle extends StatelessWidget {
               ),
               new IniciarIcon(),
               new Informacion(
-                deporte: deporte,
+                descripcion: descripcion,
               ),
           ],
         ),
@@ -229,7 +178,7 @@ class IniciarNombre extends StatelessWidget {
                   style: new TextStyle(fontSize: 20.0, color: Colors.blue),
                 ),
                 new Text(
-                  "",
+                  "Hola",
                   style: new TextStyle(fontSize: 15.0, color: Colors.blueGrey),
                 ),
               ],
@@ -282,7 +231,7 @@ class IconTec extends StatelessWidget {
           ),
           new Text(
             tec,
-            style: new TextStyle(fontSize: 12.0, color: Colors.blue),
+            style: new TextStyle(fontSize: 12.0, color: Colors.black),
           )
         ],
       ),
@@ -291,19 +240,21 @@ class IconTec extends StatelessWidget {
 }
 
 class Informacion extends StatelessWidget {
-  Informacion({this.deporte});
-  final String deporte;
+  Informacion({this.descripcion,this.imagen2});
+  final String descripcion;
+  final String imagen2;
+  
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 800,
       padding: new EdgeInsets.all(10.0),
       child: new Card(
         child: new Padding(
           padding: const EdgeInsets.all(10.0),
           child: new Text(
-            deporte,
-            style: new TextStyle(fontSize: 16.0, color: Colors.blue),
+            descripcion,
+            style: new TextStyle(fontSize: 30.0, color: Colors.black),
           ),
         ),
       ),

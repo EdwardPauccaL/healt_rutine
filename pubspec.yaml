@@ -35,6 +35,7 @@ dependencies:
   meta:
   rxdart:
   flutter_auth_buttons:
+  audioplayers:
   http:
   frideos:
 
@@ -87,4 +88,8 @@ flutter:
     - img/Premiun.jpeg
     - img/healtrutine.png
     - img/premiun2.png
+    - img/pesasHR.png
+    - img/deadliftHR.png
+    - img/BenchHR.png
     - assets/images/
+    - assets/audio.mp3

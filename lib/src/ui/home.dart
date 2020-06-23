@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:healt_rutine/src/pages/calculadora_imc.dart';
-import 'package:healt_rutine/src/pages/dietasrec.dart';
-import 'package:healt_rutine/src/pages/nosotros.dart';
-import 'package:healt_rutine/src/pages/usuarioperfil.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:healt_rutine/src/bloc/authentication_bloc/bloc.dart';
 
 class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
@@ -20,27 +14,27 @@ class _HomeState extends State<Home> {
 
 
   var arreglox = [
-     {"nombre": "Pierna", "imagen": "pierna2.jpg", "deporte": "Trabajo con polea 4 repiticiones de 12"},
-    {"nombre": "Pesas", "imagen": "pesas.jpg", "deporte": "Trabajo con pesas...."},
-    {"nombre": "Cinta Elastica", "imagen": "cinta.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Cinta", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 2 repeticiones de 15"},
-    {"nombre": "Abdomen", "imagen": "abdomen2.jpg", "deporte": "Abdomen alto..."},
-    {"nombre": "Peso", "imagen": "peso.jpg", "deporte": "Trabajo pesas de 5kg"},
-    {"nombre": "Pierna + Gluteos", "imagen": "pierna2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Gluteos", "imagen": "gluteos.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Mas Gluteos", "imagen": "gluteos2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Pierna..", "imagen": "pierna.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Barra", "imagen": "barra2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Rusa", "imagen": "rusa.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Pierna..", "imagen": "pierna3.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Cinta Elastica", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Peso z", "imagen": "peso2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Mancuernas", "imagen": "mancuernas.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Estiramiento", "imagen": "estiramiento.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
-    {"nombre": "Otro", "imagen": "otro.png", "deporte": "Fortalece pierna y Gluteos"},
-    {"nombre": "Otro+", "imagen": "otro1.png", "deporte": "pierna y Gluteos"},
-    {"nombre": "mas Ejercicio", "imagen": "pierna5.png", "deporte": "Fortalece pierna y Gluteos"},
-    {"nombre": "barra de 5k", "imagen": "barra.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15"},
+    {"nombre": "Brazos", "imagen": "pesasHR.png", "deporte": "Trabajo con polea 4 repiticiones de 12","descripcion": "Number of reps: 20       Number of series: 1Estimated time: 3 min"},
+    {"nombre": "Peso muerto/Deadlift", "imagen": "deadliftHR.png", "deporte": "Trabajo con pesas....","descripcion": "Pierna"},
+    {"nombre": "Bench press", "imagen": "BenchHR.png", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Cinta", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 2 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Abdomen", "imagen": "abdomen2.jpg", "deporte": "Abdomen alto...","descripcion": "Pierna"},
+    {"nombre": "Peso", "imagen": "peso.jpg", "deporte": "Trabajo pesas de 5kg","descripcion": "Pierna"},
+    {"nombre": "Pierna + Gluteos", "imagen": "pierna2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Gluteos", "imagen": "gluteos.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Mas Gluteos", "imagen": "gluteos2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Pierna..", "imagen": "pierna.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Barra", "imagen": "barra2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Rusa", "imagen": "rusa.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Pierna..", "imagen": "pierna3.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Cinta Elastica", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Peso z", "imagen": "peso2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Mancuernas", "imagen": "mancuernas.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Estiramiento", "imagen": "estiramiento.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {"nombre": "Otro", "imagen": "otro.png", "deporte": "Fortalece pierna y Gluteos","descripcion": "Pierna"},
+    {"nombre": "Otro+", "imagen": "otro1.png", "deporte": "pierna y Gluteos","descripcion": "Pierna"},
+    {"nombre": "mas Ejercicio", "imagen": "pierna5.png", "deporte": "Fortalece pierna y Gluteos","descripcion": "Pierna"},
+    {"nombre": "barra de 5k", "imagen": "barra.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
   ];
 
 
@@ -48,12 +42,18 @@ class _HomeState extends State<Home> {
     for (var i = 0; i < arreglox.length; i++) {
       final arregloxyz = arreglox[i];
       final String imagen = arregloxyz["imagen"];
+     
 
       listamos.add(new Container(
         padding: new EdgeInsets.all(10.0),
         child: new Card(
+          elevation: 8,
           child: new Column(
             children: <Widget>[
+              new Text(
+                arregloxyz['nombre'],
+                style: new TextStyle(fontSize: 20.0),
+              ),
               new Hero(
                 tag: arregloxyz['nombre'],
                 child: new Material(
@@ -66,19 +66,24 @@ class _HomeState extends State<Home> {
                         deporte: arregloxyz['deporte']
                       ),
                     )),
-                    child: new Image.asset(
-                      "img/$imagen",
-                      fit: BoxFit.contain
-                    ),
+                    child: Container(
+                      width: 300,
+                      height: 150,
+                      child:Align(
+                        alignment: Alignment.centerLeft,
+                      child:new Container(
+                            width: 150,
+                              alignment: Alignment(-1, 0),
+                            child: new Image.asset(
+                            "img/$imagen",
+                              fit: BoxFit.fill, 
+                              ),
+                          )
+                      ),
+
+                    )
                   ),
                 ),
-              ),
-              new Padding(
-                padding: new EdgeInsets.all(3.0),
-              ),
-              new Text(
-                arregloxyz['nombre'],
-                style: new TextStyle(fontSize: 20.0),
               ),
             ],
           ),
@@ -96,80 +101,17 @@ class _HomeState extends State<Home> {
 
 @override
   Widget build(BuildContext context) {
-    return Scaffold(
-       appBar: new AppBar(title: new Text('HealtRutine'), 
-       backgroundColor: Color(0xFF5F44A3),
-       actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.exit_to_app),
-            onPressed: () {
-              BlocProvider.of<AuthenticationBloc>(context).add(LoggedOut());
-            },
-          )
-        ],
-
-       ),
-       
-          drawer: new Drawer(
-            child: new ListView(
-              children: <Widget>[
-                new UserAccountsDrawerHeader(
-                  accountName: new Text('', style: TextStyle(
-                fontSize: 19,
-                 color: Colors.black,)
-                 ),
-                  accountEmail: new Text(''),
-                  decoration: new BoxDecoration(
-                    image: new DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('img/Usuario.png'),
-                    )
-                  ),
-                ),
-                new Divider(),
-                new ListTile(
-                  //Division para otra widget
-                  title: new Text("Perfil"),
-                  trailing: new Icon(Icons.face),
-                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (BuildContext context) => PerfilUsu(),
-                  )),
-                ),
-                new Divider(),
-                new ListTile(
-                  //Division para otra widget
-                  title: new Text("Calculadora IMC"),
-                  trailing: new Icon(Icons.fitness_center),
-                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (BuildContext context) => MyCalculatorApp(),
-                  )),
-                ),
-                new Divider(),
-                new ListTile(
-                  //Division para otra widget
-                  title: new Text("Dieta Recomendadas"),
-                  trailing: new Icon(Icons.alarm_on),
-                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (BuildContext context) => DietasRec(),
-                  )),
-                ),
-                new Divider(),
-                new ListTile(
-                  title: new Text("Soporte"),
-                  trailing: new Icon(Icons.help),
-                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (BuildContext context) => Nosotros(),
-                  )),
-                ),
-              ],
-            ),
-          ),
-          body: new GridView.count(
-            crossAxisCount: 2, //numero de columas de la primera pagina pruebn con 1
-            mainAxisSpacing: 0.1, //espacio entre card
-            childAspectRatio: 0.700, //espacio largo de cada card 
-            children: listamos,
-          ),
+    return Scaffold(   
+           body: new Container(
+         decoration: BoxDecoration(
+           border:Border.all(width:3,color:Colors.red,)
+         ),
+         child:  ListView(
+           shrinkWrap: true,
+           children: listamos,
+         ),
+        ),
+          
     );
   }
 }
@@ -197,7 +139,7 @@ class Detalle extends StatelessWidget {
                   child: new InkWell(
                     child: new Image.asset(
                       "img/$imagen",
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),

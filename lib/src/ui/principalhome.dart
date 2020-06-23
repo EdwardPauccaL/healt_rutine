@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:healt_rutine/src/pages/calculadora_imc.dart';
 import 'package:healt_rutine/src/pages/dietasrec.dart';
 import 'package:healt_rutine/src/pages/inicio.dart';
+import 'package:healt_rutine/src/pages/musicaRem.dart';
 import 'package:healt_rutine/src/pages/usuarioperfil.dart';
 import 'package:healt_rutine/src/ui/home.dart';
 
@@ -17,9 +17,11 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
   GlobalKey _bottomNavigationKey = GlobalKey();
+  
   final Inicio _inicio = Inicio(name: null);
   final Home _home = new Home(name: null);
-  final MyCalculatorApp _myCalculatorApp = new  MyCalculatorApp();
+  final MusicPlayer _musicPlayer = new MusicPlayer();
+  //final MyCalculatorApp _myCalculatorApp = new  MyCalculatorApp();
   final DietasRec _dietasRec = new DietasRec();
   final PerfilUsu _perfilUsu = new PerfilUsu();
 
@@ -34,7 +36,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       return _home;
       break;
       case 2:
-      return _myCalculatorApp;
+      return _musicPlayer;
       break;
       case 3:
       return _dietasRec;

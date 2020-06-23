@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:healt_rutine/src/pages/calculadora_imc.dart';
+import 'package:healt_rutine/src/pages/nosotros.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:healt_rutine/src/bloc/authentication_bloc/bloc.dart';
 
 class PerfilUsu extends StatelessWidget {
   final VoidCallback _onPressed;
@@ -10,6 +14,55 @@ class PerfilUsu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: new AppBar(title: new Text('HealtRutine'), 
+       backgroundColor: Color(0xFF5F44A3),
+       actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              BlocProvider.of<AuthenticationBloc>(context).add(LoggedOut());
+            },
+          )
+        ],
+
+       ),
+       
+          drawer: new Drawer(
+            child: new ListView(
+              children: <Widget>[
+                new UserAccountsDrawerHeader(
+                  accountName: new Text('', style: TextStyle(
+                fontSize: 19,
+                 color: Colors.black,)
+                 ),
+                  accountEmail: new Text(''),
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('img/Usuario.png'),
+                    )
+                  ),
+                ),
+                new Divider(),
+                new ListTile(
+                  //Division para otra widget
+                  title: new Text("Calculadora IMC"),
+                  trailing: new Icon(Icons.fitness_center),
+                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                    builder: (BuildContext context) => MyCalculatorApp(),
+                  )),
+                ),
+                new Divider(),
+                new ListTile(
+                  title: new Text("Soporte"),
+                  trailing: new Icon(Icons.help),
+                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                    builder: (BuildContext context) => Nosotros(),
+                  )),
+                ),
+              ],
+            ),
+          ),
 
       //appBar: new AppBar(
         //backgroundColor: Color(0xFF5F44A3),
@@ -54,29 +107,6 @@ class PerfilUsu extends StatelessWidget {
            child: Text('Editar Perfil',style: TextStyle(fontSize: 16)),
            color:  Color(0xFFBE3636),
          ),
-          Divider(
-                    height: 25,
-                  ),
-         RaisedButton(
-           shape: RoundedRectangleBorder(
-             borderRadius : BorderRadius.circular(30.0),
-           ),
-          onPressed: _onPressed, 
-           child: Text('Cambiar de Proposito',style: TextStyle(fontSize: 16)),
-           color:  Color(0xFFBE3636),
-         ),
-         Divider(
-                    height: 25,
-                  ),
-         RaisedButton(
-           shape: RoundedRectangleBorder(
-             borderRadius : BorderRadius.circular(30.0),
-           ),
-          onPressed: _onPressed, 
-           child: Text('Eliminar Cuenta',style: TextStyle(fontSize: 16)),
-           color:  Color(0xFFBE3636),
-         )
-
 
         ],
       ),
