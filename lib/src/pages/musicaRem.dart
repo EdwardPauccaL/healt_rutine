@@ -42,9 +42,10 @@ class _MusicPlayerState extends State<MusicPlayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Music Player",
-            style: TextStyle(fontSize: 20, color: Colors.purpleAccent)),
+        title: Text("Music",
+            style: TextStyle(fontSize: 20, color:Color(0xFF5F44A3))),
         centerTitle: true,
+        backgroundColor: Color(0xFFFFFFFF),
       ),
       body: Center(
           child: Padding(

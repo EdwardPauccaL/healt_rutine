@@ -4,8 +4,9 @@ class DietasRec extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(title: new Text("Dietas Recomendadas"),
-      backgroundColor: Color(0xFF5F44A3),
+      appBar: new AppBar(title: new Text("Diet",style: TextStyle(fontSize: 20, color:Color(0xFF5F44A3))),
+      centerTitle: true,
+      backgroundColor: Color(0xFFFFFFFF),
       ),
       body: Column(
         children: <Widget>[

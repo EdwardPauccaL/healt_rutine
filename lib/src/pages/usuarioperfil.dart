@@ -14,11 +14,13 @@ class PerfilUsu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(title: new Text('HealtRutine'), 
-       backgroundColor: Color(0xFF5F44A3),
+      appBar: new AppBar(title: new Text('Profile',style: TextStyle(fontSize: 20, color:Color(0xFF5F44A3))), 
+      centerTitle: true,
+       backgroundColor: Color(0xFFFFFFFF),
        actions: <Widget>[
           IconButton(
             icon: Icon(Icons.exit_to_app),
+            splashColor: Color(0xFF5F44A3),
             onPressed: () {
               BlocProvider.of<AuthenticationBloc>(context).add(LoggedOut());
             },
@@ -77,36 +79,35 @@ class PerfilUsu extends StatelessWidget {
         children: <Widget>[
           Header(
             height: 350,
-            backgroundAsset :'assets/images/fondoPerfil.jpg',
+            backgroundAsset :'assets/images/blanco.jpg',
             userAsset:'img/Usuario.png',
             username:'John  Doe',
           ),
-
+         RaisedButton(
+           shape: RoundedRectangleBorder(
+             borderRadius : BorderRadius.circular(90.0),
+           ),
+          onPressed: _onPressed, 
+           child: Text('Update Answers',style: TextStyle(fontSize: 18)),
+           color:  Color(0xFF5F44A3),
+         ),
+         Divider(
+                    height: 50,
+                  ),
           Container(
-            color: Color.fromARGB(40, 0, 275, 0),
+            color: Color.fromARGB(0, 0, 0, 0),
             padding: EdgeInsets.symmetric(vertical:10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-             Column(children:<Widget>[Text('Completados',),
-             Text('39')],),
-              Column(children:<Widget>[Text('Frecuencia'),
-              Text('67 %')],),
-               Column(children:<Widget>[Text('Level'),
-               Text('3')],),
+             Column(children:<Widget>[Text('80',),
+             Text('Weight')],),
+              Column(children:<Widget>[Text('80%'),
+              Text('Frequency')],),
+               Column(children:<Widget>[Text('3'),
+               Text('Level')],),
             ],),
           ),
-           Divider(
-                    height: 40,
-                  ),
-         RaisedButton(
-           shape: RoundedRectangleBorder(
-             borderRadius : BorderRadius.circular(30.0),
-           ),
-          onPressed: _onPressed, 
-           child: Text('Editar Perfil',style: TextStyle(fontSize: 16)),
-           color:  Color(0xFFBE3636),
-         ),
 
         ],
       ),
@@ -132,7 +133,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: this.height,
-      padding: EdgeInsets.only(bottom: 25),
+      padding: EdgeInsets.only(bottom: 40),
          decoration: BoxDecoration(
      image: DecorationImage(
       image: AssetImage(this.backgroundAsset),
@@ -147,10 +148,10 @@ class Header extends StatelessWidget {
     assetImage: this.userAsset,
     size: 200,
         ),
-        Text('@${this.username}',
+        Text('${this.username}',
         style: TextStyle(
-    fontSize: 19,
-    color: Colors.white,
+    fontSize: 26,
+    color: Colors.black,
         ),),
       ],
       ),
@@ -182,7 +183,7 @@ final double size;
        ),
        shape: BoxShape.circle,
       ),
-      margin: EdgeInsets.only(bottom: 5),
+      margin: EdgeInsets.only(bottom: 10),
     );
   }
 }
