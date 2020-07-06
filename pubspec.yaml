@@ -31,6 +31,7 @@ dependencies:
   curved_navigation_bar:
   google_sign_in:
   flutter_bloc:
+  bloc:
   equatable:
   meta:
   rxdart:
@@ -40,6 +41,7 @@ dependencies:
   frideos:
 
   decimal:
+  percent_indicator:
     
 
 

@@ -3,46 +3,147 @@ import 'package:flutter/material.dart';
 class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
   final String name;
-  Home({Key key,@required this.name}) :  super(key: key);
-  
+  Home({Key key, @required this.name}) : super(key: key);
 }
 
 class _HomeState extends State<Home> {
-
   //creamos un arreglo de datos imagenes y nombre ejercicio
   List<Container> listamos = List();
 
-
   var arreglox = [
-    {"nombre": "Brazos", "imagen": "pesasHR.png", "deporte": "Trabajo con polea 4 repiticiones de 12","descripcion": "Number of reps: 20       Number of series: 1Estimated time: 3 min"},
-    {"nombre": "Peso muerto/Deadlift", "imagen": "deadliftHR.png", "deporte": "Trabajo con pesas....","descripcion": "Pierna"},
-    {"nombre": "Bench press", "imagen": "BenchHR.png", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Cinta", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 2 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Abdomen", "imagen": "abdomen2.jpg", "deporte": "Abdomen alto...","descripcion": "Pierna"},
-    {"nombre": "Peso", "imagen": "peso.jpg", "deporte": "Trabajo pesas de 5kg","descripcion": "Pierna"},
-    {"nombre": "Pierna + Gluteos", "imagen": "pierna2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Gluteos", "imagen": "gluteos.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Mas Gluteos", "imagen": "gluteos2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Pierna..", "imagen": "pierna.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Barra", "imagen": "barra2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Rusa", "imagen": "rusa.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Pierna..", "imagen": "pierna3.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Cinta Elastica", "imagen": "cinta2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Peso z", "imagen": "peso2.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Mancuernas", "imagen": "mancuernas.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Estiramiento", "imagen": "estiramiento.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
-    {"nombre": "Otro", "imagen": "otro.png", "deporte": "Fortalece pierna y Gluteos","descripcion": "Pierna"},
-    {"nombre": "Otro+", "imagen": "otro1.png", "deporte": "pierna y Gluteos","descripcion": "Pierna"},
-    {"nombre": "mas Ejercicio", "imagen": "pierna5.png", "deporte": "Fortalece pierna y Gluteos","descripcion": "Pierna"},
-    {"nombre": "barra de 5k", "imagen": "barra.jpg", "deporte": "Trabajo con cinta 4 repeticiones de 15","descripcion": "Pierna"},
+    {
+      "nombre": "Brazos",
+      "imagen": "pesasHR.png",
+      "deporte": "Trabajo con polea 4 repiticiones de 12",
+      "descripcion":
+          "Number of reps: 20       Number of series: 1Estimated time: 3 min"
+    },
+    {
+      "nombre": "Peso muerto/Deadlift",
+      "imagen": "deadliftHR.png",
+      "deporte": "Trabajo con pesas....",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Bench press",
+      "imagen": "BenchHR.png",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Cinta",
+      "imagen": "cinta2.jpg",
+      "deporte": "Trabajo con cinta 2 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Abdomen",
+      "imagen": "abdomen2.jpg",
+      "deporte": "Abdomen alto...",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Peso",
+      "imagen": "peso.jpg",
+      "deporte": "Trabajo pesas de 5kg",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Pierna + Gluteos",
+      "imagen": "pierna2.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Gluteos",
+      "imagen": "gluteos.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Mas Gluteos",
+      "imagen": "gluteos2.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Pierna..",
+      "imagen": "pierna.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Barra",
+      "imagen": "barra2.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Rusa",
+      "imagen": "rusa.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Pierna..",
+      "imagen": "pierna3.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Cinta Elastica",
+      "imagen": "cinta2.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Peso z",
+      "imagen": "peso2.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Mancuernas",
+      "imagen": "mancuernas.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Estiramiento",
+      "imagen": "estiramiento.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Otro",
+      "imagen": "otro.png",
+      "deporte": "Fortalece pierna y Gluteos",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "Otro+",
+      "imagen": "otro1.png",
+      "deporte": "pierna y Gluteos",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "mas Ejercicio",
+      "imagen": "pierna5.png",
+      "deporte": "Fortalece pierna y Gluteos",
+      "descripcion": "Pierna"
+    },
+    {
+      "nombre": "barra de 5k",
+      "imagen": "barra.jpg",
+      "deporte": "Trabajo con cinta 4 repeticiones de 15",
+      "descripcion": "Pierna"
+    },
   ];
-
 
   _listado() async {
     for (var i = 0; i < arreglox.length; i++) {
       final arregloxyz = arreglox[i];
       final String imagen = arregloxyz["imagen"];
-     
 
       listamos.add(new Container(
         padding: new EdgeInsets.all(10.0),
@@ -58,31 +159,27 @@ class _HomeState extends State<Home> {
                 tag: arregloxyz['nombre'],
                 child: new Material(
                   child: new InkWell(
-                    onTap: () =>
-                    Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new Detalle(
-                        nombre: arregloxyz['nombre'],
-                        imagen: imagen,
-                        deporte: arregloxyz['deporte']
-                      ),
-                    )),
-                    child: Container(
-                      width: 300,
-                      height: 150,
-                      child:Align(
-                        alignment: Alignment.centerLeft,
-                      child:new Container(
-                            width: 150,
+                      onTap: () =>
+                          Navigator.of(context).push(new MaterialPageRoute(
+                            builder: (BuildContext context) => new Detalle(
+                                nombre: arregloxyz['nombre'],
+                                imagen: imagen,
+                                deporte: arregloxyz['deporte']),
+                          )),
+                      child: Container(
+                        width: 300,
+                        height: 150,
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: new Container(
+                              width: 150,
                               alignment: Alignment(-1, 0),
-                            child: new Image.asset(
-                            "img/$imagen",
-                              fit: BoxFit.fill, 
+                              child: new Image.asset(
+                                "img/$imagen",
+                                fit: BoxFit.fill,
                               ),
-                          )
-                      ),
-
-                    )
-                  ),
+                            )),
+                      )),
                 ),
               ),
             ],
@@ -92,26 +189,26 @@ class _HomeState extends State<Home> {
     }
   }
 
-    @override
-   void initState() { 
-     _listado();
-      super.initState();      
-    }
+  @override
+  void initState() {
+    _listado();
+    super.initState();
+  }
 
-
-@override
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(   
-           body: new Container(
-         decoration: BoxDecoration(
-           border:Border.all(width:3,color:Colors.red,)
-         ),
-         child:  ListView(
-           shrinkWrap: true,
-           children: listamos,
-         ),
+    return Scaffold(
+      body: new Container(
+        decoration: BoxDecoration(
+            border: Border.all(
+          width: 3,
+          color: Colors.red,
+        )),
+        child: ListView(
+          shrinkWrap: true,
+          children: listamos,
         ),
-          
+      ),
     );
   }
 }
@@ -119,20 +216,19 @@ class _HomeState extends State<Home> {
 //creamos el metodo detalle
 //este se usa cuando pulsamos para ver segunda pantalla la descripcion del ejercicio
 class Detalle extends StatelessWidget {
-   Detalle({this.nombre, this.imagen, this.deporte});
+  Detalle({this.nombre, this.imagen, this.deporte});
   final String nombre;
   final String imagen;
   final String deporte;
 
-
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        resizeToAvoidBottomPadding: false,
-        body: new ListView(
-          children: <Widget>[
-            new Container(
-              height: 387.0,//tamaño de la segunda imagen
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      body: new ListView(
+        children: <Widget>[
+          new Container(
+              height: 387.0, //tamaño de la segunda imagen
               child: new Hero(
                 tag: nombre,
                 child: new Material(
@@ -144,24 +240,22 @@ class Detalle extends StatelessWidget {
                   ),
                 ),
               )),
-              new IniciarNombre(
-                nombre: nombre,
-              ),
-              new IniciarIcon(),
-              new Informacion(
-                deporte: deporte,
-              ),
-          ],
-        ),
-      );
-    } 
-
+          new IniciarNombre(
+            nombre: nombre,
+          ),
+          new IniciarIcon(),
+          new Informacion(
+            deporte: deporte,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class IniciarNombre extends StatelessWidget {
   IniciarNombre({this.nombre});
   final String nombre;
-
 
   @override
   Widget build(BuildContext context) {
@@ -186,7 +280,8 @@ class IniciarNombre extends StatelessWidget {
           ),
           new Row(
             children: <Widget>[
-              new Icon(//icono que agrega estrellas calificacion
+              new Icon(
+                //icono que agrega estrellas calificacion
                 Icons.star,
                 size: 30.0,
                 color: Colors.red,
@@ -220,19 +315,10 @@ class IniciarIcon extends StatelessWidget {
       padding: new EdgeInsets.all(10.0),
       child: new Row(
         children: <Widget>[
-          new IconTec(
-            icon: Icons.call,
-            tec: "Llamar"
-                ), 
-                new IconTec(
-            icon: Icons.message,
-            tec: "WhastApp"
-                ),
-                new IconTec(
-            icon: Icons.photo,
-            tec: "Foto"
-                ),
-                  ],
+          new IconTec(icon: Icons.call, tec: "Llamar"),
+          new IconTec(icon: Icons.message, tec: "WhastApp"),
+          new IconTec(icon: Icons.photo, tec: "Foto"),
+        ],
       ),
     );
   }
