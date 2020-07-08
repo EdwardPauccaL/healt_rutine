@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-
+import 'package:healt_rutine/src/ui/principalhome.dart';
 import 'package:healt_rutine/src/questionnaire_others/hexcolor.dart';
 import 'package:healt_rutine/src/questionnaire_others/questionnaire_tools.dart';
 
@@ -23,6 +23,27 @@ class QuestionnaireSixBody extends StatelessWidget {
     return SafeArea(
         child: Column(children: [
       QuestionnaireEndTitle(),
+      //Button Next--------------------------------------------------------------------------
+      ButtonTheme(
+          minWidth: MediaQuery.of(context).size.width / 3.5,
+          height: MediaQuery.of(context).size.height / 20,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return BottomNavBar(
+                  name: "Bienvenido",
+                );
+              }));
+            },
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            child: Text('Send',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: MediaQuery.of(context).size.height / 40)),
+            color: HexColor("#5f44a3"),
+          )),
+      //----------------------------------------------------------------------------------------
     ]));
   }
 }

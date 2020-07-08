@@ -173,7 +173,7 @@ class QuestionnaireThreeContainer extends State<QuestThreeCont> {
                                     : Colors.black,
                                 fontSize:
                                     MediaQuery.of(context).size.height / 60)),
-                        Text('Tall and slim, accelerated metabolism',
+                        Text('Tall and slim, accelerated mtbl',
                             style: TextStyle(
                                 color: HexColor("#b9b9b9"),
                                 fontSize:
@@ -227,7 +227,7 @@ class QuestionnaireThreeContainer extends State<QuestThreeCont> {
                                     : Colors.black,
                                 fontSize:
                                     MediaQuery.of(context).size.height / 60)),
-                        Text('Flabby and thick, slow metabolism',
+                        Text('Flabby and thick, slow mtbl',
                             style: TextStyle(
                                 color: HexColor("#b9b9b9"),
                                 fontSize:

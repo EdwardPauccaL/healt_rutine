@@ -93,5 +93,8 @@ flutter:
     - img/pesasHR.png
     - img/deadliftHR.png
     - img/BenchHR.png
+    - img/cinta.png
+    - img/abdomens.png
+    - img/pesos.png
     - assets/images/
     - assets/audio.mp3

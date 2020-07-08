@@ -160,7 +160,6 @@ class Detalle extends StatelessWidget {
           new IniciarNombre(
             nombre: nombre,
           ),
-          new IniciarIcon(),
           new Informacion(
             descripcion: descripcion,
           ),
@@ -195,22 +194,6 @@ class IniciarNombre extends StatelessWidget {
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class IniciarIcon extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: new EdgeInsets.all(10.0),
-      child: new Row(
-        children: <Widget>[
-          new IconTec(icon: Icons.call, tec: "Llamar"),
-          new IconTec(icon: Icons.message, tec: "WhastApp"),
-          new IconTec(icon: Icons.photo, tec: "Foto"),
         ],
       ),
     );
@@ -256,7 +239,7 @@ class Informacion extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: new Text(
             descripcion,
-            style: new TextStyle(fontSize: 30.0, color: Colors.black),
+            style: new TextStyle(fontSize: 19, color: Colors.black),
           ),
         ),
       ),

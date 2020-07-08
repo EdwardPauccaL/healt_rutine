@@ -4,8 +4,9 @@ import 'package:bloc/bloc.dart';
 import 'package:healt_rutine/src/bloc/authentication_bloc/bloc.dart';
 import 'package:healt_rutine/src/bloc/simple_bloc_delegate.dart';
 import 'package:healt_rutine/src/repository/user_repository.dart';
-import 'package:healt_rutine/src/ui/principalhome.dart';
+import 'package:healt_rutine/src/Cuestionario/questionnaire_One.dart';
 import 'package:healt_rutine/src/ui/login/login_screen.dart';
+import 'package:healt_rutine/src/ui/principalhome.dart';
 import 'package:healt_rutine/src/ui/splash_screen.dart';
 
 void main() {
@@ -13,22 +14,21 @@ void main() {
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
   final UserRepository userRepository = UserRepository();
-  runApp(
-    BlocProvider(
-      create: (context) => AuthenticationBloc(userRepository: userRepository)
-        ..add(AppStarted()),
-      child: App(userRepository: userRepository),
-    )
-  );
+  runApp(BlocProvider(
+    create: (context) =>
+        AuthenticationBloc(userRepository: userRepository)..add(AppStarted()),
+    child: App(userRepository: userRepository),
+  ));
 }
+
 //Widget
 class App extends StatelessWidget {
   final UserRepository _userRepository;
 
   App({Key key, @required UserRepository userRepository})
-    : assert (userRepository != null),
-      _userRepository = userRepository,
-      super(key: key);
+      : assert(userRepository != null),
+        _userRepository = userRepository,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,16 +38,19 @@ class App extends StatelessWidget {
           if (state is Uninitialized) {
             return SplashScreen();
           }
+          //BottomNavBar(name: state.displayName,)
+
           if (state is Authenticated) {
-            return BottomNavBar(name: state.displayName,);
+            return QuestionnaireOne();
           }
           if (state is Unauthenticated) {
-            return LoginScreen(userRepository: _userRepository,);
+            return LoginScreen(
+              userRepository: _userRepository,
+            );
           }
           return Container();
         },
       ),
     );
-    
   }
 }

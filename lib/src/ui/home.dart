@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
     {
       "nombre": "Brazos",
       "imagen": "pesasHR.png",
-      "deporte": "Trabajo con polea 4 repiticiones de 12",
+      "deporte": "Trabajo con 2 marcuernas  ,repiticiones de 12",
       "descripcion":
           "Number of reps: 20       Number of series: 1Estimated time: 3 min"
     },
@@ -32,19 +32,19 @@ class _HomeState extends State<Home> {
     },
     {
       "nombre": "Cinta",
-      "imagen": "cinta2.jpg",
+      "imagen": "cinta.png",
       "deporte": "Trabajo con cinta 2 repeticiones de 15",
       "descripcion": "Pierna"
     },
     {
       "nombre": "Abdomen",
-      "imagen": "abdomen2.jpg",
+      "imagen": "abdomens.png",
       "deporte": "Abdomen alto...",
       "descripcion": "Pierna"
     },
     {
       "nombre": "Peso",
-      "imagen": "peso.jpg",
+      "imagen": "pesos.png",
       "deporte": "Trabajo pesas de 5kg",
       "descripcion": "Pierna"
     },
@@ -201,8 +201,8 @@ class _HomeState extends State<Home> {
       body: new Container(
         decoration: BoxDecoration(
             border: Border.all(
-          width: 3,
-          color: Colors.red,
+          width: 0,
+          color: Color(0xFF5F44A3),
         )),
         child: ListView(
           shrinkWrap: true,
@@ -243,7 +243,6 @@ class Detalle extends StatelessWidget {
           new IniciarNombre(
             nombre: nombre,
           ),
-          new IniciarIcon(),
           new Informacion(
             deporte: deporte,
           ),
@@ -272,7 +271,7 @@ class IniciarNombre extends StatelessWidget {
                   style: new TextStyle(fontSize: 20.0, color: Colors.blue),
                 ),
                 new Text(
-                  "$nombre\@gmail.com",
+                  "5Repeticiones de  $nombre , presional el contador para iniciar su ejercicio",
                   style: new TextStyle(fontSize: 15.0, color: Colors.blueGrey),
                 ),
               ],
